@@ -1,7 +1,5 @@
-import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
-
-public class Main {
+public class Menu_du_jeux {
     public static void main(String[] args) {
         int initialisation_du_personnage;
         String decision_de_la_modification_du_personnage;
@@ -21,10 +19,9 @@ public class Main {
         initialisation_du_personnage = clavier.nextInt();
         clavier.nextLine();
         System.out.println(" ");
-        if (initialisation_du_personnage == 2) {
-            System.exit(0);
-        }
-
+        //----------------------------------------------------------------------
+        // Ici j'appelle la fonction exits
+        //----------------------------------------------------------------------
         System.out.print("quel type de personnage vous voulez créer : Guerrier (g), Magicien (m)");
         class_du_personnage = clavier.nextLine();
 //---------------------------information ci je choisie le guerrier --------------------------------
