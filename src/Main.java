@@ -3,6 +3,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        Guerrier myguerrier = new Guerrier("Guillaume",10,20,"hache","l'epee","bouclier","mouchoir");
+        Guerrier myguerrier2 = new Guerrier("Michel",105,205,"delapidation","invocation famillie","pluie de ver de terre","anneaux gastrique");
+
+        System.out.println("Le personnage s'appelle : "+myguerrier.nom_du_personnage);
+        System.out.println("Sa vie est de : "+myguerrier.niveau_de_vie_guerrier);
+        System.out.println("Sa force est de : "+myguerrier.niveau_de_force_guerrier);
+        System.out.println("Son arme principale est : "+myguerrier.arme_principale_1);
+        System.out.println();
+        System.out.println("Le personnage numéro deux s'appelle : "+myguerrier2.nom_du_personnage);
+        System.out.println("Sa vie est de : "+myguerrier2.niveau_de_vie_guerrier);
+        System.out.println("Sa force est de : "+myguerrier2.niveau_de_force_guerrier);
+        System.out.println("Son arme principale est : "+myguerrier.arme_principale_1);
+        System.out.println();
+        System.exit(0);
+
         int initialisation_du_personnage;
         String decision_de_la_modification_du_personnage;
         String class_du_personnage;
@@ -15,6 +31,7 @@ public class Main {
         int niveau_de_force_guerrier = 10;
         int niveau_de_vie_magicien = 5;
         int niveau_de_force_du_magicien = 15;
+
         Scanner clavier = new Scanner(System.in);
 
         System.out.print("Vous souhaitez créer un nouveau personnage (1) ou quitter le jeu (2) : ");
