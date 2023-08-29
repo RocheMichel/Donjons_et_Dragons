@@ -4,13 +4,19 @@
 //import java.sql.*; // outil de gestion du driver ça permet d'utiliser le driver
 
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
 //        Menu_du_jeux depart_du_programme = new Menu_du_jeux();
 //        depart_du_programme.start();
 //        depart_du_programme.modifier_personnage();
-//        depart_du_programme.plateau_jeux_deplacement_du_joueur();
+////        depart_du_programme.plateau_jeux_deplacement_du_joueur();
+        ArrayList<Personnage>personnages = Database.getHeroes();
+        for (int i =0;i<personnages.size(); i++) {
+            System.out.println(personnages.get(i));
+        }
     }
 
 }

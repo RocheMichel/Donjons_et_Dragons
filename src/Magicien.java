@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------- Class Guerrier -----------------------------------------------------------------------------------------------
-public class Magicien {
+public class Magicien implements  Personnage {
 
 //---------------------------------------------------------------------------------- Attributs ------------------------------------------------------------------------------------------------------
         private String nom_du_personnage;
@@ -76,13 +76,8 @@ public class Magicien {
         public void setSort_deffencive_2_deffencive_2(String armedef2){
         sort_deffencive_2 = armedef2;
     }
-//    public String toString() {
-//        return "Compte numero " + this.nom_du_personnage +
-//                " : proprietaire " + this.niveau_de_vie_magicien +
-//                " : proprietaire " + this.niveau_de_vie_magicien +
-//                " : proprietaire " + this.niveau_de_vie_magicien +
-//                " : proprietaire " + this.niveau_de_vie_magicien +
-//                ", montant " + this.niveau_de_force_magicien;
-//    }
+    public String toString() {
+        return "le nom du magicien est : " + this.nom_du_personnage + "\n" + "le niveau de vie : " + this.niveau_de_vie_magicien + "\n" + "le niveau de force : " + this.niveau_de_force_magicien + "\n" + "le sort d'attaque n 1 est :" + this.sort_principale_1 + "\n"+ "le sort d'attaque n 2 est " + this.sort_principale_2 + "\n"+ "le sort defensif n 1 est : " + this.sort_deffencive_1 + "\n"+ "le sort defensif n 2 est "+ this.sort_deffencive_2 +"\n";
+    }
 
 }

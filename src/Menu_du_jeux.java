@@ -1,13 +1,16 @@
 
-import java.sql.SQLOutput;
+import com.mysql.cj.jdbc.Driver;
+
+import java.sql.*;
 import java.util.Scanner;
+//partie getheros
 
 public class Menu_du_jeux {
     private Guerrier mon_personnage;
     private Magicien mon_personnage1;
     private String class_du_personnage;
     private String reponse;
-    private  Scanner clavier;
+    private Scanner clavier;
     private deplacement_du_joueur deplacementDuJoueur;
     private deplacement_du_joueur nbr_aleatoire;
 
@@ -21,7 +24,6 @@ public class Menu_du_jeux {
         this.deplacementDuJoueur = new deplacement_du_joueur();
         this.nbr_aleatoire = new deplacement_du_joueur();
     }
-
 
 
     public void start() {
@@ -217,21 +219,23 @@ public class Menu_du_jeux {
             }
         }
     }
-
-//    public void plateau_jeux_deplacement_du_joueur(){
-//        int nbr_de = 0;
-////        System.out.println("Voulez vous commencer l'aventure (cl) ou voulez-vous quitter la partie (q)?");
-////        reponse = clavier.nextLine();
-//           deplacementDuJoueur.deplacement();
-//        System.out.println(deplacementDuJoueur);
-//
-////        System.out.println("");
-////        System.out.println("Le "+this.class_du_personnage+" est sur la case "+ deplacementDuJoueur.nbr_aleatoire();+" Du plateau du jeux");
-////        System.out.println("");
-////        System.out.print("Voulez vous jeter le dés ? tapé (l) ou quitter tapé (q)");
-////        reponse = clavier.nextLine();
-//
-//
-//
-//    }
 }
+
+////    public void plateau_jeux_deplacement_du_joueur(){
+////        int nbr_de = 0;
+//////        System.out.println("Voulez vous commencer l'aventure (cl) ou voulez-vous quitter la partie (q)?");
+//////        reponse = clavier.nextLine();
+////           deplacementDuJoueur.deplacement();
+////        System.out.println(deplacementDuJoueur);
+////
+//////        System.out.println("");
+//////        System.out.println("Le "+this.class_du_personnage+" est sur la case "+ deplacementDuJoueur.nbr_aleatoire();+" Du plateau du jeux");
+//////        System.out.println("");
+//////        System.out.print("Voulez vous jeter le dés ? tapé (l) ou quitter tapé (q)");
+//////        reponse = clavier.nextLine();
+////
+////
+////
+////    }
+//}
+

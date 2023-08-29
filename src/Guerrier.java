@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------- Class Guerrier -----------------------------------------------------------------------------------------------
-public class Guerrier {
+public class Guerrier implements Personnage {
 
 //---------------------------------------------------------------------------------- Attributs ------------------------------------------------------------------------------------------------------
         private String nom_du_personnage;
@@ -87,6 +87,7 @@ public class Guerrier {
             arme_deffencive_2 = armedef2;
         }
 
-
-
+    public String toString() {
+        return "le nom du guerrier est : " + this.nom_du_personnage + "\n" + "le niveau de vie : " + this.niveau_de_vie_guerrier + "\n" + "le niveau de force : " + this.niveau_de_force_guerrier + "\n" + "l'arme d'attaque n 1 est :" + this.arme_principale_1 + "\n"+ "l'arme d'attaque n 2 est " + this.arme_principale_2 + "\n"+ "l'arme defensif n 1 est : " + this.arme_deffencive_1 + "\n"+ "l'arme defensif n 2 est "+ this.arme_deffencive_2 + "\n";
+    }
 }
