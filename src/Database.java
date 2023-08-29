@@ -1,14 +1,12 @@
-import java.util.ArrayList;
-import com.mysql.cj.jdbc.Driver;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
+import java.util.ArrayList; // ça me permet d'utiliser la fonction liste de tableau
+import com.mysql.cj.jdbc.Driver;// j'etablis la connection au serveur mysql
+import java.sql.Connection;// j'etablis la connection au serveur mysql avec le driver manager
+import java.sql.DriverManager;// on ajoute le driver à la liste des drivers de java
+import java.sql.Statement;// je prepare la ou les requete(s)
+import java.sql.ResultSet;// j'execute une requete
 public class Database {
-    public static ArrayList<Personnage> getHeroes() {
-        ArrayList<Personnage> personnages =  new ArrayList<Personnage>();
+    public static ArrayList<Personnage> getHeroes() { //c'est la fonction qui me retourne la liste des éléments compris dans mon tableau
+        ArrayList<Personnage> personnages =  new ArrayList<Personnage>();// création de l'objet personnages qui est lui même un tableau de liste
 
 
         //je vais créer un ogjet de type driver pour me connecter à la bdd
@@ -30,8 +28,9 @@ public class Database {
             ResultSet resultatDuneRequette = preparationDeRequettes.executeQuery("SELECT * FROM magicien;");// j'execute une requete
 
             while (resultatDuneRequette.next()) { // c'est pour parcourire les differentes lignes de ma table magicien
+                //j'ai creer une variable qui comprend la class Magicien je la nom magicien et je lui dit qu'elle contiendra toutes les types compris dans la de base de données
                 Magicien magicien= new Magicien( resultatDuneRequette.getString("nom"),resultatDuneRequette.getInt("niveau_de_vie"), resultatDuneRequette.getInt("forcee"),resultatDuneRequette.getString("sort"),"",resultatDuneRequette.getString("protection"),"");
-                personnages.add(magicien);
+                personnages.add(magicien);//ça veut dire que je met dans la variable personnages les valeurs compris dans la class magicien
 //                System.out.println("Le magicien s'appel " + resultatDuneRequette.getString("nom")); //j'affiche le resultat de ma requete
 //                System.out.println("Le magicien s'appel " + resultatDuneRequette.getString("class_du_perso") + "\n la force du magicien est de " + resultatDuneRequette.getString("forcee"));
             }
@@ -41,7 +40,7 @@ public class Database {
             e.printStackTrace();
 
         }
-        return personnages;
+        return personnages;// je retourne les valeurs compris dans la liste du tableau personnage qui son les élément de la table magicien construit dans la base de données
     }
 
 }
