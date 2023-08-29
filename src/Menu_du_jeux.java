@@ -218,20 +218,20 @@ public class Menu_du_jeux {
         }
     }
 
-    public void plateau_jeux_deplacement_du_joueur(){
-        int nbr_de = 0;
-//        System.out.println("Voulez vous commencer l'aventure (cl) ou voulez-vous quitter la partie (q)?");
-//        reponse = clavier.nextLine();
-           deplacementDuJoueur.deplacement();
-        System.out.println(deplacementDuJoueur);
-
-//        System.out.println("");
-//        System.out.println("Le "+this.class_du_personnage+" est sur la case "+ deplacementDuJoueur.nbr_aleatoire();+" Du plateau du jeux");
-//        System.out.println("");
-//        System.out.print("Voulez vous jeter le dés ? tapé (l) ou quitter tapé (q)");
-//        reponse = clavier.nextLine();
-
-
-
-    }
+//    public void plateau_jeux_deplacement_du_joueur(){
+//        int nbr_de = 0;
+////        System.out.println("Voulez vous commencer l'aventure (cl) ou voulez-vous quitter la partie (q)?");
+////        reponse = clavier.nextLine();
+//           deplacementDuJoueur.deplacement();
+//        System.out.println(deplacementDuJoueur);
+//
+////        System.out.println("");
+////        System.out.println("Le "+this.class_du_personnage+" est sur la case "+ deplacementDuJoueur.nbr_aleatoire();+" Du plateau du jeux");
+////        System.out.println("");
+////        System.out.print("Voulez vous jeter le dés ? tapé (l) ou quitter tapé (q)");
+////        reponse = clavier.nextLine();
+//
+//
+//
+//    }
 }
